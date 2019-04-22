@@ -79,6 +79,7 @@ var uniqueID = "";
                 'complete': function () {
                     $('#fieldForm').prop('disabled', false);
                     regForm.reset();
+                    regForm.clearValidation();
                     grecaptcha.reset();
 
                 }
