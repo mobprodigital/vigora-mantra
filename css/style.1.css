@@ -387,6 +387,7 @@ tbody tr:nth-child(odd) th {
     color: #fff;
     background: #343a40;
     font-size: 14px;
+    flex-flow: column;
 }
 
 .width-25px {
@@ -413,6 +414,10 @@ ol.text-align-justify li p b {
     color: #3d3d3d;
 }
 
+.privacy-policy-headding {
+    color: #fff;
+    padding: 25px 0px ;
+}
 
 /* for xl screen */
 @media screen and (min-width: 1200px) {
