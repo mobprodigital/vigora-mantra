@@ -117,7 +117,7 @@ function pymentSuccess(id) {
                 $("#TXN_AMOUNT").val(response.data.price);
                 document.hmg.submit();
             }
-            //  gtag_report_conversion();
+          gtag_report_conversion();
         },
         'complete': function () {
             $("#loader").hide();
