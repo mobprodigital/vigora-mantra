@@ -111,7 +111,7 @@ function pymentSuccess(id) {
 
 
             if (response.data.payment_type == 'COD') {
-                //  hitVnativeApi(response.data.order_id, response.data.price)
+                  hitVnativeApi(response.data.order_id, response.data.price)
                 $("#ModalTitle").html('Order details');
                 $('#ord-msg').html('Thank You for Placing your order, your order ID is' + '  "' + response.data.order_id + '" , we have also sent a mail to your mail ID.' + ' ');
                 $('#ord-msg , #ModalTitle').addClass('color-dark-green').removeClass('color-red');
