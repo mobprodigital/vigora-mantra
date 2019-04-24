@@ -1,0 +1,35 @@
+.text-align-justify {
+    text-align: justify;
+}
+
+ol.text-align-justify li p,
+ol.text-align-justify li ol li {
+    color: #767676;
+    font-size: 18px;
+}
+
+ol.text-align-justify li ol li {
+    list-style-type: upper-alpha;
+}
+
+ol.text-align-justify li b,
+ol.text-align-justify li p b {
+    font-size: 18px;
+    color: #3d3d3d;
+}
+
+.privacy-policy-headding {
+    color: #fff;
+    padding: 25px 0px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #fff;
+    background: #343a40;
+    font-size: 14px;
+    flex-flow: column;
+}

@@ -370,7 +370,7 @@ function verifyCaptcha() {
 
 (
     function () {
-        var str = '<img src="assets/images/icon/star.png" alt="">';
+        var str = '<img src="assets/images/hair_mantra/icon/star.png" alt="">';
         $('.5star').html(str.repeat(5));
         $('.4star').html(str.repeat(4));
         $('.3star').html(str.repeat(3));

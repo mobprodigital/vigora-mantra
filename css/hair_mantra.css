@@ -1,28 +1,10 @@
-.site-logo {
+.logo {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.top-note {
-    font-size: 18px;
-    color: #fff;
-    text-align: center;
-    padding: 8px 0;
-    margin: 0px;
-}
-
-.high-light {
-    color: #cddc28;
-    font-weight: 700;
-}
-
-.note {
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #fff;
-}
 
 .section {
     width: 100%;
@@ -31,34 +13,34 @@
 
 
 .sec1 {
-    background: url(../assets/images/bg-img/sec-1.png) no-repeat scroll center top transparent;
+    background: url(../assets/images/hair_mantra/bg-img/sec-1.png) no-repeat scroll center top transparent;
 
 }
 
 .sec2 {
-    background: url(../assets/images/bg-img/sec-2.png) no-repeat scroll center top transparent;
+    background: url(../assets/images/hair_mantra/bg-img/sec-2.png) no-repeat scroll center top transparent;
 
 }
 
 .sec3 {
-    background: url(../assets/images/bg-img/sec-3.png) no-repeat scroll center top transparent;
+    background: url(../assets/images/hair_mantra/bg-img/sec-3.png) no-repeat scroll center top transparent;
 
 }
 
 .sec4 {
-    background: url(../assets/images/bg-img/sec-4.png) no-repeat scroll center top transparent;
+    background: url(../assets/images/hair_mantra/bg-img/sec-4.png) no-repeat scroll center top transparent;
 
 }
 
 .sec5 {
-    background: url(../assets/images/bg-img/sec-5.jpg) no-repeat scroll center top transparent;
+    background: url(../assets/images/hair_mantra/bg-img/sec-5.jpg) no-repeat scroll center top transparent;
 
 
 }
 
 
 .sec1-top-bg-img1 {
-    background: url(../assets/images/bg-img/top-cont-bg-img2.png) left top no-repeat rgba(0, 0, 0, 0);
+    background: url(../assets/images/hair_mantra/bg-img/top-cont-bg-img2.png) left top no-repeat rgba(0, 0, 0, 0);
     color: #fff;
     font-size: 19px;
     line-height: 21px;
@@ -194,7 +176,7 @@
 }
 
 ul.sec1-list li {
-    background: url('../assets/images/icon/right.jpg') left top no-repeat rgba(0, 0, 0, 0);
+    background: url('../assets/images/hair_mantra/icon/right.jpg') left top no-repeat rgba(0, 0, 0, 0);
     color: #222;
     font-size: 18px;
     font-weight: 700;
@@ -248,12 +230,12 @@ ul.sec1-list li span {
 }
 
 .sec3-bottom-bg-img1 {
-    background: url('../assets/images/hair_mantra_tags/sec3-btm-cont-bg.png') left top no-repeat rgba(0, 0, 0, 0);
+    background: url('../assets/images/hair_mantra/hair_mantra_tags/sec3-btm-cont-bg.png') left top no-repeat rgba(0, 0, 0, 0);
 
 }
 
 ul.sec3-list li {
-    background: url('../assets/images/icon/right.jpg') left top no-repeat rgba(0, 0, 0, 0);
+    background: url('../assets/images/hair_mantra/icon/right.jpg') left top no-repeat rgba(0, 0, 0, 0);
     float: left;
     margin-bottom: 15px;
     padding-left: 40px;
@@ -294,22 +276,22 @@ ul.sec4-list li span {
 
 
 ul.sec4-list li:nth-child(1) {
-    background: url('../assets/images/bg-img/sec4-list-img1.png') left top no-repeat rgba(0, 0, 0, 0);
+    background: url('../assets/images/hair_mantra/bg-img/sec4-list-img1.png') left top no-repeat rgba(0, 0, 0, 0);
 
 }
 
 ul.sec4-list li:nth-child(2) {
-    background: url('../assets/images/bg-img/sec4-list-img2.png') left top no-repeat rgba(0, 0, 0, 0);
+    background: url('../assets/images/hair_mantra/bg-img/sec4-list-img2.png') left top no-repeat rgba(0, 0, 0, 0);
 
 }
 
 ul.sec4-list li:nth-child(3) {
-    background: url('../assets/images/bg-img/sec4-list-img3.png') left top no-repeat rgba(0, 0, 0, 0);
+    background: url('../assets/images/hair_mantra/bg-img/sec4-list-img3.png') left top no-repeat rgba(0, 0, 0, 0);
 
 }
 
 ul.sec4-list li:nth-child(4) {
-    background: url('../assets/images/bg-img/sec4-list-img4.png') left top no-repeat rgba(0, 0, 0, 0);
+    background: url('../assets/images/hair_mantra/bg-img/sec4-list-img4.png') left top no-repeat rgba(0, 0, 0, 0);
 
 }
 
@@ -350,7 +332,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .sec {
-    background: url('../assets/images/bg-img/sec3-btm-cont-bg.png') center top no-repeat;
+    background: url('../assets/images/hair_mantra/bg-img/sec3-btm-cont-bg.png') center top no-repeat;
 
 }
 
@@ -379,16 +361,6 @@ tbody tr:nth-child(odd) th {
     cursor: pointer;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    color: #fff;
-    background: #343a40;
-    font-size: 14px;
-    flex-flow: column;
-}
 
 .width-25px {
     width: 25px;
@@ -421,7 +393,7 @@ ol.text-align-justify li p b {
 
 /* for xl screen */
 @media screen and (min-width: 1200px) {
-    .site-logo {
+    .logo {
 
         justify-content: flex-end;
     }
@@ -535,11 +507,6 @@ ol.text-align-justify li p b {
 
 /* Extra small screen*/
 @media screen and (max-width: 575px) {
-
-
-    .top-note {
-        font-size: 14px;
-    }
 
     .sec1 {
         background: none
