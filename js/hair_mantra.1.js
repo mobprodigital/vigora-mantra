@@ -73,7 +73,6 @@ var uniqueID = "";
                     if (parse_data.data) {
                         pymentSuccess(parse_data.data);
                     }
-                    $('#order-msg').show();
 
                 },
                 'complete': function () {
@@ -93,7 +92,7 @@ var uniqueID = "";
             $('#order').modal('show');
         }
     });
-    $('#order-msg').hide();
+    
 })();
 
 function pymentSuccess(id) {
@@ -107,16 +106,13 @@ function pymentSuccess(id) {
         'processData': false,
         'success': function (res, status) {
             var response = JSON.parse(res);
-            $('#order-msg').hide();
-
-
             if (response.data.payment_type == 'COD') {
-                  hitVnativeApi(response.data.order_id, response.data.price)
+                  hitVnativeApi(response.data.order_id, response.data.price);
                 $("#ModalTitle").html('Order details');
                 $('#ord-msg').html('Thank You for Placing your order, your order ID is' + '  "' + response.data.order_id + '" , we have also sent a mail to your mail ID.' + ' ');
                 $('#ord-msg , #ModalTitle').addClass('color-dark-green').removeClass('color-red');
                 $('#order').modal('show');
-                $('#order-msg').hide();
+                
             } else if (response.data.payment_type == 'online') {
                 $("#ORDER_ID").val(response.data.order_id);
                 $("#CUST_ID").val(response.data.user_id);
