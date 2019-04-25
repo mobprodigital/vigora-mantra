@@ -1,0 +1,551 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.section {
+    width: 100%;
+    position: relative;
+}
+
+
+.sec1 {
+    background: url(../assets/images/slim_mantra/bg-img/sec-1.png) no-repeat scroll left top transparent;
+
+}
+
+.sec2 {
+    background: url(../assets/images/slim_mantra/bg-img/sec-2.jpg) repeat scroll right top transparent;
+
+}
+
+.sec3 {
+    background: url(../assets/images/slim_mantra/bg-img/sec-3.png) no-repeat scroll left top transparent;
+
+}
+
+.sec4 {
+    background: url(../assets/images/slim_mantra/bg-img/sec-4.png) no-repeat scroll center top transparent;
+
+}
+
+.sec5 {
+    background: url(../assets/images/slim_mantra/bg-img/sec-5.jpg) no-repeat scroll center top transparent;
+
+
+}
+
+
+.sec1-top-bg-img1 {
+    background: url(../assets/images/slim_mantra/bg-img/top-cont-bg-img2.png) left top no-repeat rgba(0, 0, 0, 0);
+    color: #fff;
+    font-size: 19px;
+    line-height: 21px;
+}
+
+.form-container {
+    /* background-color: #196780; */
+    padding: 15px;
+    color: #3d3d3d;
+    margin: 30px 0px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+
+.about-product {
+    text-transform: uppercase;
+    color: green;
+    margin: 15px 0px;
+    font-size: 14px;
+    border-left: solid 1px #a29797;
+    padding: 10px;
+}
+
+.about-product span {
+    font-size: 20px;
+    color: #3d3d3d;
+    font-weight: 600;
+    display: block;
+}
+
+.recommended-container {
+    padding-left: 200px;
+}
+
+.sec1-title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #054405;
+    margin-top: 1rem;
+    line-height: 3rem;
+
+}
+
+.display-block {
+    display: block;
+}
+
+.sec2-title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #000;
+    margin-top: 1rem;
+    line-height: 3rem;
+
+}
+
+.sec3-title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #000;
+    margin-top: 1rem;
+    line-height: 3rem;
+    font-weight: 500;
+    margin-top: 1rem
+}
+
+.sec4-title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #000;
+    margin-top: 1rem;
+    line-height: 3rem;
+    font-weight: 500;
+    margin-top: 5rem
+}
+
+.color-dark-green {
+    color: #037503;
+}
+
+.color-green {
+    color: green;
+}
+
+.color-red {
+    color: #f1592a;
+}
+
+.color-navy-blue {
+    color: #039bcb;
+}
+
+.color-yello {
+    color: #d8cc2e;
+}
+
+
+.recommended {
+    padding: 24px 18px;
+    width: 75%;
+    font-size: 18px;
+}
+
+.sec1-list {
+    list-style: none;
+    background: #153e4b;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+
+ul.sec1-list li {
+    background: url('../assets/images/slim_mantra/icon/right.svg') left top no-repeat rgba(0, 0, 0, 0);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 5px 0;
+    padding: 10px 0px 10px 40px;
+    text-transform: uppercase;
+}
+
+.sec1-product-image-container {
+    padding-top: 5rem;
+    position: relative;
+}
+
+.sec2-description-1 {
+    font-size: 20px;
+    line-height: 1.5rem;
+    margin: 15px 0px;
+    color: #067b06;
+}
+
+.sec2-description-2 {
+    font-size: 19px;
+    line-height: 1.5rem;
+    margin: 25px 0px;
+    color: #0f0f0f;
+    text-align: justify;
+}
+
+.sec2-right-image {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sec3-description {
+    color: #000;
+    font-size: 17px;
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.sec3-description span {
+    font-weight: 600;
+    font-size: 24px;
+    display: block;
+    color: #fb7600;
+}
+
+.sec3-comment-container {
+    border: solid 2px #e3e3e3;
+    padding: 15px 0px;
+    border-radius: 6px;
+    margin: 20px 0px;
+    box-shadow: 3px 3px 4px 2px #e3e3e3;
+}
+
+.sec3-comment {
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: 600;
+    font-family: serif, sans-serif;
+    color: #3d3d3d;
+}
+
+.sec3-comment span {
+    font-size: 1.6em;
+    color: green;
+    display: block;
+}
+
+
+
+.sec4-list {
+    list-style: none;
+}
+.sec4-desccription
+{
+    font-size: 1.2em;
+    color: #0f0f0f;
+    text-align: justify;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 35px 0px;
+}
+
+ul.sec4-list li {
+    margin-bottom: 15px;
+    padding-left: 6rem;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 600;
+    padding-top: 28px;
+}
+
+ul.sec4-list li span {
+    color: #65bb40;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    display: block;
+}
+
+
+ul.sec4-list li {
+    background: url('../assets/images/slim_mantra/icon/sec4-right-check.png') left top no-repeat rgba(0, 0, 0, 0);
+
+}
+
+.table-container {
+    padding: 3rem 0rem;
+}
+
+td,
+tr {
+    text-align: center;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even) th {
+    background: #76c051;
+    color: #fff;
+}
+
+tbody tr:nth-child(odd) th {
+    background: #cfe5ed;
+    color: #3d3d3d;
+}
+
+.btn-order {
+
+    border-radius: 6px;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+
+
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.invalid-feedback {
+    color: #ef7d87
+}
+
+.sec {
+    background: url('../assets/images/slim_mantra/bg-img/sec3-btm-cont-bg.png') center top no-repeat;
+
+}
+
+.tag-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.tag {
+    width: 155px;
+    height: 160px;
+}
+
+.selection-container {
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    border: solid 3px #fff;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background: #0f3f4e;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.width-25px {
+    width: 25px;
+}
+
+.text-align-justify {
+    text-align: justify;
+}
+
+ol.text-align-justify li p,
+ol.text-align-justify li ol li {
+    color: #767676;
+    font-size: 18px;
+}
+
+ol.text-align-justify li ol li {
+    list-style-type: upper-alpha;
+}
+
+ol.text-align-justify li b,
+ol.text-align-justify li p b {
+    font-size: 18px;
+    color: #3d3d3d;
+}
+
+.privacy-policy-headding {
+    color: #fff;
+    padding: 25px 0px;
+}
+
+/* for xl screen */
+@media screen and (min-width: 1200px) {}
+
+/* for Large screen*/
+@media screen and (max-width: 1199px) {
+    .recommended-container {
+        padding-left: 56px;
+    }
+
+    .recommended {
+        width: 85%;
+    }
+
+    .sec1-title,
+    .sec2-title,
+    .sec3-title,
+    .sec4-title {
+        font-size: 2rem;
+        line-height: 2rem;
+
+    }
+
+    ul.sec3-list li {
+        width: 100%;
+    }
+
+
+}
+
+/* for medium screen*/
+
+@media screen and (max-width: 991px) {
+    .recommended-container {
+        padding-left: 0px;
+    }
+
+    .recommended {
+        width: 60%;
+    }
+
+    .sec1-title {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: 0px;
+    }
+
+    .sec2-title,
+    .sec3-title,
+    .sec4-title {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: 2rem;
+    }
+
+
+
+    .sec3-list {
+        padding: 0px;
+    }
+
+    .sec3-comment {
+        font-size: .9em;
+    }
+}
+
+/* for small screen*/
+@media screen and (max-width: 767px) {
+    .recommended-container {
+        padding-left: 0px;
+    }
+
+    .recommended {
+        width: 80%;
+    }
+
+
+    .sec1-title {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: 0px;
+    }
+
+    .sec2-title,
+    .sec3-title {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: 2rem;
+    }
+
+    .sec4-title {
+        margin-top: 14rem;
+    }
+
+    .sec1 {
+        background: none
+    }
+
+    .sec2,
+    .sec3,
+    .sec4 {
+        background-size: contain, cover;
+    }
+
+    .flex-sm {
+        display: flex;
+    }
+
+    .flex-sm div {
+        margin-left: 15px;
+    }
+
+    .hide-sm {
+        display: none;
+    }
+
+    .sec3-comment {
+        font-size: 1.3em;
+    }
+}
+
+/* Extra small screen*/
+@media screen and (max-width: 575px) {
+
+
+
+    .sec1 {
+        background: none
+    }
+
+    .sec2,
+    .sec3,
+    .sec4 {
+        background-size: contain, cover;
+
+    }
+
+    .recommended-container {
+        padding-left: 0px;
+    }
+
+    .sec1-title {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin: 0px;
+    }
+
+    .sec2-title,
+    .sec3-title {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: 2rem;
+    }
+
+    .sec4-title {
+        margin-top: 10rem;
+    }
+
+    .recommended {
+        padding: 15px;
+        background: #039bcb;
+        margin-top: 15px;
+        width: 100%
+    }
+
+    ul.sec3-list li {
+        width: 90%;
+    }
+
+
+
+    .sec4-list,
+    .sec3-list {
+        padding: 0px;
+    }
+
+    ul.sec4-list li {
+        padding: 0px;
+    }
+
+    ul.sec4-list li:nth-child(1),
+    ul.sec4-list li:nth-child(2),
+    ul.sec4-list li:nth-child(3),
+    ul.sec4-list li:nth-child(4) {
+        background: none;
+    }
+
+    .form-check {
+        margin: 5px 0px;
+    }
+}
