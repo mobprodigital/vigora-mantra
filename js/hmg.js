@@ -11,9 +11,13 @@ var uniqueID = "";
     ];
     var month = months[d.getMonth()];
     var fullyear = d.getFullYear();
+
     var fulldate = day + ", " + month + ' ' + date + ", " + fullyear;
     document.getElementById("date").innerHTML = fulldate;
+
+
     var regForm = document.getElementById('regForm');
+
     regForm = validationSetup(regForm);
 
     regForm.addEventListener('onValidationFaild', function () {
@@ -57,17 +61,17 @@ var uniqueID = "";
 
         };
 
-       if (Captha()) {
+        if (Captha()) {
             $('#fieldForm').prop('disabled', true);
             $("#loader").show();
             $.post({
-                'url': "https://mojogamezone.com/development/riccha_dev/SlimMantra/setFormData.php",
+                'url': "https://mojogamezone.com/development/riccha_dev/HairProduct/setFormData.php",
                 'data': JSON.stringify(dataToSend),
                 'processData': false,
                 'success': function (res, status) {
                     var parse_data = JSON.parse(res);
-                    if (parse_data.userData) {
-                        orderSuccess(parse_data.userData);
+                    if (parse_data.data) {
+                        pymentSuccess(parse_data.data);
                     }
                     $('#order-msg').show();
 
@@ -80,7 +84,7 @@ var uniqueID = "";
 
                 }
             });
-       } else {
+        } else {
             $("#ModalTitle").html('Error Message');
 
             $('#ord-msg').html('Please fill all the details.');
@@ -92,13 +96,13 @@ var uniqueID = "";
     $('#order-msg').hide();
 })();
 
-function orderSuccess(id) {
+function pymentSuccess(id) {
     var dataToSend = {
         'id': id
     };
 
     $.post({
-        'url': "https://mojogamezone.com/development/riccha_dev/SlimMantra/successProductOrder.php",
+        'url': "https://mojogamezone.com/development/riccha_dev/HairProduct/successProductOrder.php",
         'data': JSON.stringify(dataToSend),
         'processData': false,
         'success': function (res, status) {
@@ -106,18 +110,20 @@ function orderSuccess(id) {
             $('#order-msg').hide();
 
 
-            if (response.userData.payment_type == 'COD') {
+            if (response.data.payment_type == 'COD') {
+         
                 $("#ModalTitle").html('Order details');
-                $('#ord-msg').html('Thank You for Placing your order, your order ID is' + '  "' + response.userData.order_id + '" , we have also sent a mail to your mail ID.' + ' ');
+                $('#ord-msg').html('Thank You for Placing your order, your order ID is' + '  "' + response.data.order_id + '" , we have also sent a mail to your mail ID.' + ' ');
                 $('#ord-msg , #ModalTitle').addClass('color-dark-green').removeClass('color-red');
                 $('#order').modal('show');
                 $('#order-msg').hide();
-            } else if (response.userData.payment_type == 'online') {
-                $("#ORDER_ID").val(response.userData.order_id);
-                $("#CUST_ID").val(response.userData.user_id);
-                $("#TXN_AMOUNT").val(response.userData.price);
-                document.sm.submit();
+            } else if (response.data.payment_type == 'online') {
+                $("#ORDER_ID").val(response.data.order_id);
+                $("#CUST_ID").val(response.data.user_id);
+                $("#TXN_AMOUNT").val(response.data.price);
+                document.hmg.submit();
             }
+            gtag_report_conversion();
         },
         'complete': function () {
             $("#loader").hide();
@@ -131,9 +137,22 @@ function orderSuccess(id) {
 
 
 
+function gtag_report_conversion(url) {
+    var callback = function () {
+        if (typeof (url) != 'undefined') {
+            window.location = url;
+        }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-749956943/zWfkCNfV85gBEM_ezeUC',
+        'event_callback': callback
+    });
+    return false;
+}
 
 
-$('#sendOTP').click(function () {
+// $('#sendOTP').click(function () {
+    function setUserBase(){
 
     var phoneInput = document.getElementById('phone');
     validateField(phoneInput);
@@ -161,14 +180,14 @@ $('#sendOTP').click(function () {
 
     };
     $.post({
-        'url': "https://mojogamezone.com/development/riccha_dev/SlimMantra/setUserBase.php ",
+        'url': "https://mojogamezone.com/development/riccha_dev/HairProduct/setUserBase.php",
         'data': JSON.stringify(dataToSend),
         'processData': false,
         'success': function (res, status) {
             var parse_data = JSON.parse(res);
             if (parse_data.status === true) {
-                uniqueID = parse_data.userData.id;
-                sendOTP(parse_data.userData.id, $('#phone').val());
+                uniqueID = parse_data.data.id;
+               // sendOTP(parse_data.data.id, $('#phone').val());
             } else {
                 alert(parse_data.message);
                 togglePhoneField(false);
@@ -181,7 +200,9 @@ $('#sendOTP').click(function () {
     })
     // }
     // }
-});
+
+}
+// });
 
 
 /**
@@ -349,3 +370,14 @@ function verifyCaptcha() {
 
     document.getElementById('g-recaptcha-error').innerHTML = '';
 }
+
+(
+    function () {
+        var str = '<img src="assets/images/hair_mantra/icon/star.png" alt="">';
+        $('.5star').html(str.repeat(5));
+        $('.4star').html(str.repeat(4));
+        $('.3star').html(str.repeat(3));
+        $('.2star').html(str.repeat(2));
+        $('.1star').html(str.repeat(1));
+    }
+)();
