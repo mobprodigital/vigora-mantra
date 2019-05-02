@@ -13,30 +13,30 @@
 
 
 .sec1 {
-    background: url(../assets/images/hair_mantra/bg-img/sec-1.png) no-repeat scroll center top transparent;
+    background: url(../assets/images/power_mantra/bg-img/sec1.jpg) no-repeat scroll left top transparent;
 
 }
 
 .sec2 {
-    background: url(../assets/images/hair_mantra/bg-img/sec-2.png) no-repeat scroll center top transparent;
+    background: url(../assets/images/power_mantra/bg-img/sec-2.png) repeat scroll center top transparent;
 
 }
 
 .sec3 {
-    background: url(../assets/images/hair_mantra/bg-img/sec-3.png) no-repeat scroll center top transparent;
+    background: url(../assets/images/power_mantra/bg-img/sec-3.jpg) repeat scroll center top transparent;
 
 }
 
 .sec4 {
-    background: url(../assets/images/hair_mantra/bg-img/sec-4.png) no-repeat scroll center top transparent;
+    background: url(../assets/images/power_mantra/bg-img/sec4.jpg) repeat scroll center top transparent;
 
 }
 
 .sec5 {
-    background: url(../assets/images/hair_mantra/bg-img/sec-5.jpg) no-repeat scroll center top transparent;
-
+    background: url(../assets/images/power_mantra/bg-img/sec-5.png) no-repeat scroll center top transparent;
 
 }
+
 
 
 .sec1-top-bg-img1 {
@@ -55,32 +55,6 @@
     font-weight: 600;
 }
 
-.image-container {
-    margin: 20px 0px;
-    position: relative;
-}
-
-.after-image-text {
-    position: absolute;
-    bottom: 0px;
-    right: 0;
-    color: #fff;
-    background: #039bcb;
-    width: 49%;
-    font-size: 12px;
-    text-align: center;
-}
-
-.before-image-text {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    color: #fff;
-    background: #039bcb;
-    width: 49%;
-    font-size: 12px;
-    text-align: center;
-}
 
 .about-product {
     text-transform: uppercase;
@@ -104,10 +78,11 @@
 
 .sec1-title {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #054405;
     margin: 0px;
-    line-height: 3rem;
+    line-height: 2rem;
+    margin-top: 15px;
 
 }
 
@@ -121,6 +96,32 @@
     color: #000;
     margin: 0px;
     line-height: 3rem;
+    margin-top: 15px;
+
+}
+
+.sec-img-container {
+    border: solid 2px #90979d;
+    border-radius: 6px;
+    min-height: 490px;
+    box-shadow: 3px 3px 2px 2px #b8d3ca, -3px -3px 2px 2px #b8d3ca, 3px -3px 2px 2px #b8d3ca, -3px 3px 2px 2px #b8d3ca;
+    margin: 15px 0px;
+}
+
+.sec-img-container-text {
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #4f4848;
+    line-height: 24px;
+
+}
+
+.sec-img-container-text span {
+    display: block;
+    font-size: 1.3em;
+    color: #000;
+    margin-bottom: 8px;
 
 }
 
@@ -131,7 +132,15 @@
     margin: 0px;
     line-height: 3rem;
     font-weight: 500;
-    margin-top: 5rem
+    margin-top: 15px;
+
+
+}
+
+.clinically-aprove-tag {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .sec4-title {
@@ -141,8 +150,37 @@
     margin: 0px;
     line-height: 3rem;
     font-weight: 500;
-    margin-top: 5rem
+    margin-top: 2rem
 }
+
+.sec-comment-container {
+    border: solid 2px #878787;
+    padding: 15px 0px;
+    border-radius: 6px;
+    margin: 20px 0px;
+    box-shadow: 3px 3px 4px 2px #878787;
+}
+
+.sec-comment {
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: 600;
+    font-family: serif, sans-serif;
+    color: #3d3d3d;
+    text-align: justify
+}
+
+.sec-comment span {
+    font-size: 1.4em;
+    color: green;
+    display: block;
+
+}
+
+.sec-comment::first-letter {
+    text-transform: uppercase;
+}
+
 
 .color-dark-green {
     color: #037503;
@@ -164,10 +202,10 @@
     color: #d8cc2e;
 }
 
+
 .recommended {
     padding: 24px 18px;
     width: 75%;
-    font-size: 18px;
 }
 
 .sec1-list {
@@ -200,119 +238,41 @@ ul.sec1-list li span {
     line-height: 1.5rem;
     margin: 15px 0px;
     color: #067b06;
+    font-weight: 500;
+    text-align: justify;
 }
 
 .sec2-description-2 {
     font-size: 19px;
     line-height: 1.5rem;
-    margin: 25px 0px;
+    padding: 25px 0px;
     color: #0f0f0f;
+    font-weight: 500;
+    text-align: justify;
 }
 
-.sec2-description-3 {
-    font-size: 17px;
-    line-height: 1.5rem;
-    margin: 15px 0px;
-    color: #000;
-    font-weight: 700;
-}
 
 .sec3-description {
     color: #000;
     font-size: 17px;
     line-height: 1.5rem;
-    margin: 20px 0px;
+    padding: 20px 0px;
     font-weight: 500;
+    text-align: justify;
 }
 
-.sec3-list {
-    list-style: none;
-}
-
-.sec3-bottom-bg-img1 {
-    background: url('../assets/images/hair_mantra/hair_mantra_tags/sec3-btm-cont-bg.png') left top no-repeat rgba(0, 0, 0, 0);
-
-}
-
-ul.sec3-list li {
-    background: url('../assets/images/hair_mantra/icon/right.jpg') left top no-repeat rgba(0, 0, 0, 0);
-    float: left;
-    margin-bottom: 15px;
-    padding-left: 40px;
-    width: 48%;
-    font-size: 20px;
-    line-height: 22px;
-    color: #000;
-}
-
-ul.sec3-list li span {
-    color: #000;
-    font-size: 26px;
+.sec4-description {
+    border: solid 2px #e3e3e3;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 1.5em;
     font-weight: 600;
-    display: block;
+    text-align: justify;
 }
 
-.sec4-list {
-    list-style: none;
-}
-
-ul.sec4-list li {
-    margin-bottom: 15px;
-    padding-left: 6rem;
-    font-size: 16px;
+.sec4-description li {
     line-height: 24px;
-    color: #000;
-    font-weight: 600;
-    padding-top: 28px;
-}
-
-ul.sec4-list li span {
-    color: #65bb40;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 600;
-    display: block;
-}
-
-
-ul.sec4-list li:nth-child(1) {
-    background: url('../assets/images/hair_mantra/bg-img/sec4-list-img1.png') left top no-repeat rgba(0, 0, 0, 0);
-
-}
-
-ul.sec4-list li:nth-child(2) {
-    background: url('../assets/images/hair_mantra/bg-img/sec4-list-img2.png') left top no-repeat rgba(0, 0, 0, 0);
-
-}
-
-ul.sec4-list li:nth-child(3) {
-    background: url('../assets/images/hair_mantra/bg-img/sec4-list-img3.png') left top no-repeat rgba(0, 0, 0, 0);
-
-}
-
-ul.sec4-list li:nth-child(4) {
-    background: url('../assets/images/hair_mantra/bg-img/sec4-list-img4.png') left top no-repeat rgba(0, 0, 0, 0);
-
-}
-
-.table-container {
-    padding: 3rem 0rem;
-}
-
-td,
-tr {
-    text-align: center;
-    cursor: pointer;
-}
-
-tbody tr:nth-child(even) th {
-    background: #76c051;
-    color: #fff;
-}
-
-tbody tr:nth-child(odd) th {
-    background: #cfe5ed;
-    color: #3d3d3d;
+    margin: 10px 0px;
 }
 
 .btn-order {
@@ -331,10 +291,6 @@ tbody tr:nth-child(odd) th {
     color: #ef7d87
 }
 
-.sec {
-    background: url('../assets/images/hair_mantra/bg-img/sec3-btm-cont-bg.png') center top no-repeat;
-
-}
 
 .tag-container {
     position: absolute;
@@ -366,13 +322,9 @@ tbody tr:nth-child(odd) th {
     width: 25px;
 }
 
-/* for xl screen */
-@media screen and (min-width: 1200px) {
-    .logo {
 
-        justify-content: flex-end;
-    }
-}
+/* for xl screen */
+@media screen and (min-width: 1200px) {}
 
 /* for Large screen*/
 @media screen and (max-width: 1200px) {
@@ -384,7 +336,12 @@ tbody tr:nth-child(odd) th {
         width: 85%;
     }
 
-    .sec1-title,
+    .sec1-title {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+
+    }
+
     .sec2-title,
     .sec3-title,
     .sec4-title {
@@ -411,24 +368,21 @@ tbody tr:nth-child(odd) th {
         width: 60%;
     }
 
-    .sec1-title {
-        font-size: 2rem;
-        line-height: 2rem;
-        margin-top: 0px;
-    }
 
     .sec2-title,
     .sec3-title,
     .sec4-title {
         font-size: 2rem;
         line-height: 2rem;
-        margin-top: 2rem;
+
     }
-
-
 
     .sec3-list {
         padding: 0px;
+    }
+
+    .sec-comment {
+        font-size: .9em;
     }
 }
 
@@ -443,28 +397,16 @@ tbody tr:nth-child(odd) th {
     }
 
 
-    .sec1-title {
-        font-size: 2rem;
-        line-height: 2rem;
-        margin-top: 0px;
-    }
-
     .sec2-title,
     .sec3-title,
     .sec4-title {
         font-size: 2rem;
         line-height: 2rem;
-        margin-top: 9rem;
+
     }
 
     .sec1 {
         background: none
-    }
-
-    .sec2,
-    .sec3,
-    .sec4 {
-        background-size: contain, cover;
     }
 
     .flex-sm {
@@ -487,20 +429,13 @@ tbody tr:nth-child(odd) th {
         background: none
     }
 
-    .sec2,
-    .sec3,
-    .sec4 {
-        background-size: contain, cover;
-    }
-
     .recommended-container {
         padding-left: 0px;
     }
 
     .sec1-title {
-        font-size: 2rem;
-        line-height: 2rem;
-        margin: 0px;
+        font-size: 1rem;
+        line-height: 1rem;
     }
 
     .sec2-title,
@@ -508,7 +443,7 @@ tbody tr:nth-child(odd) th {
     .sec4-title {
         font-size: 2rem;
         line-height: 2rem;
-        margin-top: 7rem;
+
     }
 
     .recommended {

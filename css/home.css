@@ -1,0 +1,24 @@
+.product-container {
+    border: solid 2px #878787;
+    padding: 15px 0px;
+    border-radius: 6px;
+    margin: 20px 0px;
+    box-shadow: 3px 3px 4px 2px #878787;
+}
+
+.product-container-text {
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: 600;
+    font-family: serif, sans-serif;
+    color: #3d3d3d;
+    text-align: justify
+}
+
+.product-container-text a {
+    font-size: 1.4em;
+    color: green;
+    display: block;
+    text-decoration: none;
+
+}

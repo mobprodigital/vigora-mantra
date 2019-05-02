@@ -1,4 +1,3 @@
-
 .top-note {
     font-size: 18px;
     color: #fff;
@@ -51,5 +50,11 @@
 
     .top-note {
         font-size: 14px;
+    }
+
+    .contact-details {
+        color: #fff;
+        font-size: .8em;
+        cursor: pointer;
     }
 }

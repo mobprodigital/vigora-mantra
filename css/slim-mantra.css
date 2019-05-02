@@ -39,7 +39,7 @@
 
 
 .sec1-top-bg-img1 {
-    background: url(../assets/images/slim_mantra/bg-img/top-cont-bg-img2.png) left top no-repeat rgba(0, 0, 0, 0);
+    background: url(../assets/images/common/top-cont-bg-img2.png) left top no-repeat rgba(0, 0, 0, 0);
     color: #fff;
     font-size: 19px;
     line-height: 21px;
@@ -217,6 +217,7 @@ ul.sec1-list li {
     font-weight: 600;
     font-family: serif, sans-serif;
     color: #3d3d3d;
+    text-align: justify;
 }
 
 .sec3-comment span {
@@ -230,8 +231,8 @@ ul.sec1-list li {
 .sec4-list {
     list-style: none;
 }
-.sec4-desccription
-{
+
+.sec4-desccription {
     font-size: 1.2em;
     color: #0f0f0f;
     text-align: justify;
@@ -332,31 +333,6 @@ tbody tr:nth-child(odd) th {
 
 .width-25px {
     width: 25px;
-}
-
-.text-align-justify {
-    text-align: justify;
-}
-
-ol.text-align-justify li p,
-ol.text-align-justify li ol li {
-    color: #767676;
-    font-size: 18px;
-}
-
-ol.text-align-justify li ol li {
-    list-style-type: upper-alpha;
-}
-
-ol.text-align-justify li b,
-ol.text-align-justify li p b {
-    font-size: 18px;
-    color: #3d3d3d;
-}
-
-.privacy-policy-headding {
-    color: #fff;
-    padding: 25px 0px;
 }
 
 /* for xl screen */
@@ -538,10 +514,7 @@ ol.text-align-justify li p b {
         padding: 0px;
     }
 
-    ul.sec4-list li:nth-child(1),
-    ul.sec4-list li:nth-child(2),
-    ul.sec4-list li:nth-child(3),
-    ul.sec4-list li:nth-child(4) {
+    ul.sec4-list li {
         background: none;
     }
 
