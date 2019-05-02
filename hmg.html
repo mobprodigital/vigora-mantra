@@ -37,7 +37,7 @@
             <p class='top-note'> <span class="note"> PLEASE NOTE:</span> Due to extremely high demand, there
               is
               limited supply of
-              <span class="high-light"> Slim Mantra</span>
+              <span class="high-light"> Hair Mantra</span>
               available. - As of
               <span id="date" class="high-light"></span>
               Product is in stock and ready to ship.</p>
@@ -90,7 +90,7 @@
 
                   <img class="w-100" src="assets/images/hair_mantra/productes/5.png" alt="">
                   <div class="tag-container">
-                    <img class="tag" src="assets/images/hair_mantra//hair_mantra_tags/price-tag.png" alt="" srcset="">
+                    <img class="tag" src="assets/images/hair_mantra/tag/product-tag.png" alt="" srcset="">
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@
                   <div class="after-image-text">After</div>
                 </div>
                 <div>
-                  <img class="w-100" src="assets/images/hair_mantra/hair_mantra_tags/Free-Delivery.png" alt="">
+                  <img class="w-100" src="assets/images/common/Free-Delivery.png" alt="">
                 </div>
               </div>
             </div>
@@ -139,56 +139,16 @@
                     <div class="invalid-feedback" id="email-err"></div>
                   </div>
 
-                  <div class="input-group mb-3">
+                  <div class="form-group">
                     <input data-validate data-required="Please Enter Phone Number"
                       data-type="tel;Please Enter valid Phone Number"
                       data-min-length="10;Phone no should be minimum of 10 digits"
                       data-max-length="16;Phone no should be maximum of 16 digits" data-err-id="phoneNo-err" type="tel"
-                      class="form-control" id="phone" name="phone" placeholder="Phone">
-                    <div class="input-group-append">
-                      <button class="btn btn-sm  btn-success" type="button" id="sendOTP">Send
-                        OTP</button>
-                    </div>
+                      class="form-control" id="phone" name="phone" placeholder="Phone" onchange="setUserBase()">
                     <div class="invalid-feedback" id="phoneNo-err"></div>
-                    <!-- <div id="otp_send_msg" class="valid-tooltip hidden">
-                          OTP successfully send 
-                        </div>
-                        <div id="otp_not_send_msg" class="invalid-tooltip hidden">
-                          OTP not send 
-                        </div> -->
                   </div>
 
-                  <div id="opt-loader" class="progress mb-3" style="display: none">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                      aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Sending OTP</div>
-                  </div>
-
-                  <div class="input-group mb-3">
-                    <input data-validate data-required="Please Enter OTP Number"
-                      data-type="int;Please Enter valid OTP Number"
-                      data-min-length="4;OTP should be minimum of 4 digits"
-                      data-max-length="4;OTP should be maximum of 4 digits" data-err-id="otp-err" type="number"
-                      class="form-control" id="otp" name="otp" placeholder="OTP" disabled>
-                    <div class="input-group-append">
-                      <button class="btn btn-sm  btn-success" type="button" id="checkOTP" disabled>Verify
-                        OTP</button>
-                    </div>
-                    <div class="invalid-feedback" id="otp-err"></div>
-                    <!-- <div id="otp_verify_msg" class="valid-tooltip">
-                          OTP verifyed
-                        </div>
-                        <div id="otp_not_verify_msg" class="invalid-tooltip">
-                          OTP not verifyed
-                        </div> -->
-
-                  </div>
-
-                  <div id="verify-opt-loader" class="progress mb-3" style="display: none">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                      aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Verifying OTP</div>
-                  </div>
-
-                  <fieldset id="after_otp" disabled>
+                
 
                     <div class="form-group">
                       <input data-validate data-required="Please Enter Adderess" data-err-id="adderess-err" type="text"
@@ -311,17 +271,15 @@
                       <br>
                       <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                          aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                          aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Placing order
+                        </div>
                       </div>
                     </div>
 
                     <div class="mt-3">
                       <button type="submit" class="btn-order">Submit</button>
                     </div>
-                  </fieldset>
-                  <div id="order-msg">
-                    <h6 class="color-yello mt-3 text-center">Thank You for Placing your order </h6>
-                  </div>
+                 
                 </fieldset>
               </form>
               <form name="hmg" method="post" action="online/pgRedirect.php">
@@ -434,11 +392,6 @@
                       Shine, strength & thickness</li>
                   </ul>
                 </div>
-
-                <div class="sec3-bottom-bg-img1">
-
-
-                </div>
               </div>
             </div>
           </div>
@@ -477,7 +430,7 @@
             </ul>
           </div>
           <div class="col-md-3 col-lg-5 hide-sm">
-            <img src="assets/images/hair_mantra//hair_mantra_tags/sec4-badge.png" alt="">
+            <img src="assets/images/common/sec4-badge.png" alt="">
           </div>
         </div>
       </div>
@@ -629,7 +582,7 @@
   <script src="lib/jquery/jquery-3.3.1.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/validation/validation.2.js"></script>
-  <script src="js/hmg.1.js"></script>
+  <script src="js/hmg.js"></script>
 </body>
 
 </html>
