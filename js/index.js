@@ -14,30 +14,20 @@ var uniqueID = "";
 
     var fulldate = day + ", " + month + ' ' + date + ", " + fullyear;
     document.getElementById("date").innerHTML = fulldate;
-
-
     var regForm = document.getElementById('regForm');
-
     regForm = validationSetup(regForm);
-
     regForm.addEventListener('onValidationFaild', function () {
         Captha()
         $("#ModalTitle").html('Error Message');
-
         $('#ord-msg').html('Please fill all the details.');
         $('#ord-msg , #ModalTitle').addClass('color-red');
-
         $('#order').modal('show');
-
     });
 
     regForm.addEventListener('onValidationSuccess', function () {
 
-
         var paymentType = $("input[name='payment_type']:checked").val();
-
         var price = $("input[name='price']:checked").val();
-
         var product
         if (price == 999) {
             product = '1 box'
@@ -58,7 +48,6 @@ var uniqueID = "";
             "product": product,
             "price": price,
             "paymentType": paymentType
-
         };
 
         if (Captha()) {
@@ -73,22 +62,18 @@ var uniqueID = "";
                     if (parse_data.data) {
                         pymentSuccess(parse_data.data);
                     }
-
                 },
                 'complete': function () {
                     $('#fieldForm').prop('disabled', false);
                     regForm.reset();
                     regForm.clearValidation();
                     grecaptcha.reset();
-
                 }
             });
         } else {
             $("#ModalTitle").html('Error Message');
-
             $('#ord-msg').html('Please fill all the details.');
             $('#ord-msg , #ModalTitle').addClass('color-red');
-
             $('#order').modal('show');
         }
     });
@@ -123,7 +108,6 @@ function pymentSuccess(id) {
         'complete': function () {
             $("#loader").hide();
             $('#after_otp,#otp,#checkOTP').prop('disabled', true);
-
         }
     });
 }
@@ -141,7 +125,7 @@ function hitVnativeApi(ordedrId, price) {
     if (!CLICK_ID) {
         return;
     }
-    var url = 'https://track.vnative.com/acquisition?click_id=' + CLICK_ID + '&security_token=1b7781812bd841125ccf&sale_amount=' + price + '&currency=INR';
+    var url = 'https://track.vnative.com/acquisition?click_id=' + CLICK_ID + '&security_token=1b7781812bd841125ccf&sale_amount=' + price + '&currency=INR&sub1='+ordedrId;
     //var url = 'https://mobpro.vnative.co/pixel?adid=5cb03404b6920d3de83be07b&txn_id=' + ordedrId + '&sale_amount=' + price;
     $.get(url);
 }
@@ -173,7 +157,6 @@ function setUserBase() {
         "lastName": $('#lname').val(),
         "email": $('#email').val(),
         "phone": $('#phone').val(),
-
     };
     $.post({
         'url': "https://mojogamezone.com/development/riccha_dev/HairProduct/setUserBase.php",
