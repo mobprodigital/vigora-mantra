@@ -29,9 +29,9 @@ var uniqueID = "";
         var paymentType = $("input[name='payment_type']:checked").val();
         var price = $("input[name='price']:checked").val();
         var product
-        if (price == 999) {
+        if (price == 1999) {
             product = '1 box'
-        } else if (price == 2699) {
+        } else if (price == 2999) {
             product = '3 box'
         } else {
             product = '6 box'
@@ -125,7 +125,7 @@ function hitVnativeApi(ordedrId, price) {
     if (!CLICK_ID) {
         return;
     }
-    var url = 'https://track.vnative.com/acquisition?click_id=' + CLICK_ID + '&security_token=1b7781812bd841125ccf&sale_amount=' + price + '&currency=INR&sub1='+ordedrId;
+    var url = 'https://track.vnative.com/acquisition?click_id=' + CLICK_ID + '&security_token=1b7781812bd841125ccf&sale_amount=' + price + '&currency=INR&sub1=' + ordedrId;
     //var url = 'https://mobpro.vnative.co/pixel?adid=5cb03404b6920d3de83be07b&txn_id=' + ordedrId + '&sale_amount=' + price;
     $.get(url);
 }
