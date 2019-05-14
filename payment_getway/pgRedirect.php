@@ -24,7 +24,7 @@ $paramList["CHANNEL_ID"] = $CHANNEL_ID;
 $paramList["TXN_AMOUNT"] = $TXN_AMOUNT;
 $paramList["WEBSITE"] = PAYTM_MERCHANT_WEBSITE;
 
-$paramList["CALLBACK_URL"] = "https://vigormantra.com/online/pgResponse.php";
+$paramList["CALLBACK_URL"] = "https://vigormantra.com/payment_getway/pgResponse.php";
 /*
 $paramList["MSISDN"] = $MSISDN; //Mobile number of customer
 $paramList["EMAIL"] = $EMAIL; //Email ID of customer
