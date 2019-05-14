@@ -60,7 +60,7 @@ var uniqueID = "";
                 'success': function (res, status) {
                     var parse_data = JSON.parse(res);
                     if (parse_data.data) {
-                        pymentSuccess(parse_data.data);
+                        orderSuccess(parse_data.data);
                     }
                 },
                 'complete': function () {
@@ -80,7 +80,7 @@ var uniqueID = "";
 
 })();
 
-function pymentSuccess(id) {
+function orderSuccess(id) {
     var dataToSend = {
         'id': id
     };
