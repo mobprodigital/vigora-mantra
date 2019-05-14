@@ -28,9 +28,9 @@ var uniqueID = "";
         var paymentType = $("input[name='payment_type']:checked").val();
         var price = $("input[name='price']:checked").val();
         var product;
-        if (price == 999) {
+        if (price == 1999) {
             product = '1 box'
-        } else if (price == 2699) {
+        } else if (price == 2999) {
             product = '3 box'
         } else {
             product = '6 box'
