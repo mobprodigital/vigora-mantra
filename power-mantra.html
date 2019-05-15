@@ -120,6 +120,7 @@
                                             placeholder="Email">
                                         <div class="invalid-feedback" id="email-err"></div>
                                     </div>
+
                                     <div class="form-group">
                                         <input data-validate data-required="Please Enter Phone Number"
                                             data-type="tel;Please Enter valid Phone Number"
@@ -130,28 +131,6 @@
                                         <div class="invalid-feedback" id="phoneNo-err"></div>
                                     </div>
 
-
-
-                                    <!-- <div class="input-group mb-3">
-                                        <input data-validate data-required="Please Enter Phone Number"
-                                            data-type="tel;Please Enter valid Phone Number"
-                                            data-min-length="10;Phone no should be minimum of 10 digits"
-                                            data-max-length="16;Phone no should be maximum of 16 digits"
-                                            data-err-id="phoneNo-err" type="tel" class="form-control" id="phone"
-                                            name="phone" placeholder="Phone">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-sm  btn-success" type="button" id="sendOTP">Send
-                                                OTP</button>
-                                        </div>
-                                        <div class="invalid-feedback" id="phoneNo-err"></div> -->
-                                    <!-- <div id="otp_send_msg" class="valid-tooltip hidden">
-                      OTP successfully send 
-                    </div>
-                    <div id="otp_not_send_msg" class="invalid-tooltip hidden">
-                      OTP not send 
-                    </div> -->
-                                    <!-- </div> -->
-
                                     <div id="opt-loader" class="progress mb-3" style="display: none">
                                         <div class="progress-bar progress-bar-striped progress-bar-animated"
                                             role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
@@ -160,7 +139,7 @@
                                     <div id="otp-send-msg"></div>
 
 
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <input data-validate data-required="Please Enter OTP Number"
                                             data-type="tel;Please Enter valid OTP Number"
                                             data-min-length="4;OTP should be minimum of 4 digits"
@@ -169,29 +148,7 @@
                                             onchange="checkOTP()" placeholder="Please Enter your OTP">
                                         <div class="invalid-feedback" id="otp-err"></div>
                                     </div>
-                                    <div id="otp-verify-msg"></div>
-
-
-                                    <!-- <div class="input-group mb-3">
-                                        <input data-validate data-required="Please Enter OTP Number"
-                                            data-type="int;Please Enter valid OTP Number"
-                                            data-min-length="4;OTP should be minimum of 4 digits"
-                                            data-max-length="4;OTP should be maximum of 4 digits" data-err-id="otp-err"
-                                            type="number" class="form-control" id="otp" name="otp" placeholder="OTP"
-                                            disabled>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-sm  btn-success" type="button" id="checkOTP"
-                                                disabled>Verify
-                                                OTP</button>
-                                        </div>
-                                        <div class="invalid-feedback" id="otp-err"></div> -->
-                                    <!-- <div id="otp_verify_msg" class="valid-tooltip">
-                      OTP verifyed
-                    </div>
-                    <div id="otp_not_verify_msg" class="invalid-tooltip">
-                      OTP not verifyed
-                    </div> -->
-                                    <!-- </div> -->
+                                    <div id="otp-verify-msg"></div> -->
 
                                     <div id="verify-opt-loader" class="progress mb-3" style="display: none">
                                         <div class="progress-bar progress-bar-striped progress-bar-animated"
@@ -199,146 +156,145 @@
                                             style="width: 100%">Verifying OTP</div>
                                     </div>
 
-                                    <fieldset id="after_otp" disabled>
+                                    <!-- <fieldset id="after_otp" disabled> -->
 
-                                        <div class="form-group">
-                                            <input data-validate data-required="Please Enter Adderess"
-                                                data-err-id="adderess-err" type="text" class="form-control"
-                                                id="adderess" name="adderess" placeholder="Adderess">
-                                            <div class="invalid-feedback" id="adderess-err"></div>
-                                        </div>
+                                    <div class="form-group">
+                                        <input data-validate data-required="Please Enter Adderess"
+                                            data-err-id="adderess-err" type="text" class="form-control" id="adderess"
+                                            name="adderess" placeholder="Adderess">
+                                        <div class="invalid-feedback" id="adderess-err"></div>
+                                    </div>
 
-                                        <div class="form-group">
-                                            <input data-validate data-required="Please Enter City"
-                                                data-type="alphabets_s;Only alphabets are allowed"
-                                                data-err-id="city-err" type="text" class="form-control" id="city"
-                                                name="city" placeholder="City">
-                                            <div class="invalid-feedback" id="city-err"></div>
-                                        </div>
+                                    <div class="form-group">
+                                        <input data-validate data-required="Please Enter City"
+                                            data-type="alphabets_s;Only alphabets are allowed" data-err-id="city-err"
+                                            type="text" class="form-control" id="city" name="city" placeholder="City">
+                                        <div class="invalid-feedback" id="city-err"></div>
+                                    </div>
 
-                                        <div class="form-group">
-                                            <input data-validate data-required="Please Enter Pincode"
-                                                data-type="int;Only Numbers are allowed" data-err-id="pincode-err"
-                                                type="number" class="form-control" id="pincode" name="pincode"
-                                                placeholder="Pincode">
-                                            <div class="invalid-feedback" id="pincode-err"></div>
-                                        </div>
+                                    <div class="form-group">
+                                        <input data-validate data-required="Please Enter Pincode"
+                                            data-type="int;Only Numbers are allowed" data-err-id="pincode-err"
+                                            type="number" class="form-control" id="pincode" name="pincode"
+                                            placeholder="Pincode">
+                                        <div class="invalid-feedback" id="pincode-err"></div>
+                                    </div>
 
-                                        <div class="form-group">
-                                            <select data-validate data-required="Please Select State"
-                                                data-err-id="State-err" class="form-control" id="state" name="state">
-                                                <option value="">-- Select State --</option>
-                                                <option value="Andhra Pradesh">Andhra Pradesh </option>
-                                                <option value="Arunachal Pradesh">Arunachal Pradesh </option>
-                                                <option value="Assam">Assam </option>
-                                                <option value="Bihar">Bihar </option>
-                                                <option value="Chhattisgarh">Chhattisgarh </option>
-                                                <option value="Goa">Goa </option>
-                                                <option value="Gujarat">Gujarat </option>
-                                                <option value="Haryana">Haryana </option>
-                                                <option value="Himachal Pradesh">Himachal Pradesh </option>
-                                                <option value="Jammu and Kashmir">Jammu and Kashmir </option>
-                                                <option value="Jharkhand">Jharkhand </option>
-                                                <option value="Karnataka">Karnataka </option>
-                                                <option value="Kerala">Kerala </option>
-                                                <option value="Madhya Pradesh">Madhya Pradesh </option>
-                                                <option value="Maharashtra">Maharashtra </option>
-                                                <option value="Manipur">Manipur </option>
-                                                <option value="Meghalaya">Meghalaya </option>
-                                                <option value="Mizoram"> Mizoram </option>
-                                                <option value="Nagaland">Nagaland </option>
-                                                <option value="Odisha">Odisha </option>
-                                                <option value="Punjab">Punjab </option>
-                                                <option value="Rajasthan">Rajasthan </option>
-                                                <option value="Sikkim">Sikkim </option>
-                                                <option value="Tamil Nadu">Tamil Nadu </option>
-                                                <option value="Telangana">Telangana </option>
-                                                <option value="Tripura">Tripura </option>
-                                                <option value="Uttar Pradesh">Uttar Pradesh </option>
-                                                <option value="Uttarakhand">Uttarakhand </option>
-                                                <option value="West Bengal">West Bengal </option>
-                                                <option value="Andaman and Nicobar">Andaman and Nicobar </option>
-                                                <option value="Chandigarh">Chandigarh </option>
-                                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli </option>
-                                                <option value="Daman and Diu	Daman">Daman and Diu Daman </option>
-                                                <option value="Delhi">Delhi </option>
-                                                <option value="Lakshadweep">Lakshadweep </option>
-                                                <option value="Puducherry">Puducherry </option>
+                                    <div class="form-group">
+                                        <select data-validate data-required="Please Select State"
+                                            data-err-id="State-err" class="form-control" id="state" name="state">
+                                            <option value="">-- Select State --</option>
+                                            <option value="Andhra Pradesh">Andhra Pradesh </option>
+                                            <option value="Arunachal Pradesh">Arunachal Pradesh </option>
+                                            <option value="Assam">Assam </option>
+                                            <option value="Bihar">Bihar </option>
+                                            <option value="Chhattisgarh">Chhattisgarh </option>
+                                            <option value="Goa">Goa </option>
+                                            <option value="Gujarat">Gujarat </option>
+                                            <option value="Haryana">Haryana </option>
+                                            <option value="Himachal Pradesh">Himachal Pradesh </option>
+                                            <option value="Jammu and Kashmir">Jammu and Kashmir </option>
+                                            <option value="Jharkhand">Jharkhand </option>
+                                            <option value="Karnataka">Karnataka </option>
+                                            <option value="Kerala">Kerala </option>
+                                            <option value="Madhya Pradesh">Madhya Pradesh </option>
+                                            <option value="Maharashtra">Maharashtra </option>
+                                            <option value="Manipur">Manipur </option>
+                                            <option value="Meghalaya">Meghalaya </option>
+                                            <option value="Mizoram"> Mizoram </option>
+                                            <option value="Nagaland">Nagaland </option>
+                                            <option value="Odisha">Odisha </option>
+                                            <option value="Punjab">Punjab </option>
+                                            <option value="Rajasthan">Rajasthan </option>
+                                            <option value="Sikkim">Sikkim </option>
+                                            <option value="Tamil Nadu">Tamil Nadu </option>
+                                            <option value="Telangana">Telangana </option>
+                                            <option value="Tripura">Tripura </option>
+                                            <option value="Uttar Pradesh">Uttar Pradesh </option>
+                                            <option value="Uttarakhand">Uttarakhand </option>
+                                            <option value="West Bengal">West Bengal </option>
+                                            <option value="Andaman and Nicobar">Andaman and Nicobar </option>
+                                            <option value="Chandigarh">Chandigarh </option>
+                                            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli </option>
+                                            <option value="Daman and Diu	Daman">Daman and Diu Daman </option>
+                                            <option value="Delhi">Delhi </option>
+                                            <option value="Lakshadweep">Lakshadweep </option>
+                                            <option value="Puducherry">Puducherry </option>
 
-                                            </select>
-                                            <div class="invalid-feedback" id="State-err"></div>
-                                        </div>
+                                        </select>
+                                        <div class="invalid-feedback" id="State-err"></div>
+                                    </div>
 
-                                        <div class="selection-container">
-                                            <h5 class="mb-2 mt0 text-center">Product Quantity
-                                                <br>
-                                                <small>60 cap/box</small>
-                                            </h5>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input " type="radio" name="price" id="price1"
-                                                    value="1999" checked>
-                                                <label class="form-check-label cursor-pointer" for="price1">1 Box - 1999
-                                                    INR</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input " type="radio" name="price" id="price2"
-                                                    value='2999'>
-                                                <label class="form-check-label cursor-pointer" for="price2">3 Box - 2999
-                                                    INR ( 50 % Discount
-                                                    )</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input " type="radio" name="price" id="price3"
-                                                    value="4999">
-                                                <label class="form-check-label cursor-pointer" for="price3">6 Box - 4999
-                                                    INR ( 60 % Discount
-                                                    )</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="selection-container">
-                                            <h5 class="mb-2 mt0 text-center">Payment Type</h5>
-                                            <div class="container-floid">
-
-                                                <div class="form-check form-check-inline">
-                                                    <input checked class="form-check-input " type="radio"
-                                                        name="payment_type" id="payment_type1" value='COD'>
-                                                    <label class="form-check-label cursor-pointer"
-                                                        for="payment_type1">Cash on
-                                                        Delivery</label>
-                                                </div>
-
-                                                <div class="form-check form-check-inline d-none">
-                                                    <input class="form-check-input " type="radio" name="payment_type"
-                                                        id="payment_type2" value="online">
-                                                    <label class="form-check-label cursor-pointer"
-                                                        for="payment_type2">Online Payment</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="g-recaptcha"
-                                                data-sitekey=" 6LdzCp0UAAAAALL2Tc6XGcCLrC3Vy8Mv8ePOxCI-"
-                                                data-callback="verifyCaptcha">
-                                            </div>
-                                            <div id="g-recaptcha-error"></div>
-                                        </div>
-
-                                        <div id="loader" style="display : none">
+                                    <div class="selection-container">
+                                        <h5 class="mb-2 mt0 text-center">Product Quantity
                                             <br>
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                    role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                                    aria-valuemax="100" style="width: 100%"></div>
+                                            <small>60 cap/box</small>
+                                        </h5>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input " type="radio" name="price" id="price1"
+                                                value="1999" checked>
+                                            <label class="form-check-label cursor-pointer" for="price1">1 Box - 1999
+                                                INR</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input " type="radio" name="price" id="price2"
+                                                value='2999'>
+                                            <label class="form-check-label cursor-pointer" for="price2">3 Box - 2999
+                                                INR ( 50 % Discount
+                                                )</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input " type="radio" name="price" id="price3"
+                                                value="4999">
+                                            <label class="form-check-label cursor-pointer" for="price3">6 Box - 4999
+                                                INR ( 60 % Discount
+                                                )</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="selection-container">
+                                        <h5 class="mb-2 mt0 text-center">Payment Type</h5>
+                                        <div class="container-floid">
+
+                                            <div class="form-check form-check-inline">
+                                                <input checked class="form-check-input " type="radio"
+                                                    name="payment_type" id="payment_type1" value='COD'>
+                                                <label class="form-check-label cursor-pointer" for="payment_type1">Cash
+                                                    on
+                                                    Delivery</label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline d-none">
+                                                <input class="form-check-input " type="radio" name="payment_type"
+                                                    id="payment_type2" value="online">
+                                                <label class="form-check-label cursor-pointer"
+                                                    for="payment_type2">Online Payment</label>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div class="mt-3">
-                                            <button type="submit" class="btn-order">Submit</button>
+                                    <div>
+                                        <div class="g-recaptcha"
+                                            data-sitekey=" 6LdzCp0UAAAAALL2Tc6XGcCLrC3Vy8Mv8ePOxCI-"
+                                            data-callback="verifyCaptcha">
                                         </div>
-                                    </fieldset>
+                                        <div id="g-recaptcha-error"></div>
+                                    </div>
+
+                                    <div id="loader" style="display : none">
+                                        <br>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <button type="submit" class="btn-order">Submit</button>
+                                    </div>
+                                    <!-- </fieldset> -->
                                     <div id="order-msg">
                                         <h6 class="color-yello mt-3 text-center">Thank You for Placing your order
                                         </h6>
@@ -655,7 +611,7 @@
     <script src="lib/jquery/jquery-3.3.1.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/validation/validation.2.js"></script>
-    <script src="js/power-mantra2.js"></script>
+    <script src="js/power-mantra3.js"></script>
 </body>
 
 </html>

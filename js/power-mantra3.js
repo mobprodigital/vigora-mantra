@@ -51,7 +51,7 @@ var uniqueID = "";
 
         };
 
-        //   if (Captha()) {
+          if (Captha()) {
         $('#fieldForm').prop('disabled', true);
         $("#loader").show();
         $.post({
@@ -72,12 +72,12 @@ var uniqueID = "";
                 grecaptcha.reset();
             }
         });
-        // } else {
-        //     $("#ModalTitle").html('Error Message');
-        //     $('#ord-msg').html('Please fill all the details.');
-        //     $('#ord-msg , #ModalTitle').addClass('color-red');
-        //     $('#order').modal('show');
-        // }
+        } else {
+            $("#ModalTitle").html('Error Message');
+            $('#ord-msg').html('Please fill all the details.');
+            $('#ord-msg , #ModalTitle').addClass('color-red');
+            $('#order').modal('show');
+        }
     });
     $('#order-msg').hide();
 })();
@@ -100,6 +100,7 @@ function orderSuccess(id) {
                 $('#ord-msg , #ModalTitle').addClass('color-dark-green').removeClass('color-red');
                 $('#order').modal('show');
                 $('#order-msg').hide();
+                hitVnativeApi(response.data.order_id, response.data.price);
             } else if (response.data.payment_type == 'online') {
                 $("#ORDER_ID").val(response.data.order_id);
                 $("#CUST_ID").val(response.data.user_id);
@@ -124,8 +125,8 @@ function setUserBase() {
         return;
     }
 
-    togglePhoneField(true);
-    toggleSendOtpProgressBar(true);
+    //  togglePhoneField(true);
+    //  toggleSendOtpProgressBar(true);
     var dataToSend = {
         "firstName": $('#fname').val(),
         "lastName": $('#lname').val(),
@@ -140,7 +141,7 @@ function setUserBase() {
             var parse_data = JSON.parse(res);
             if (parse_data.status === true) {
                 uniqueID = parse_data.data.id;
-                sendOTP(parse_data.data.id, $('#phone').val());
+                // sendOTP(parse_data.data.id, $('#phone').val());
             } else {
                 alert(parse_data.message);
                 togglePhoneField(false);
@@ -152,6 +153,21 @@ function setUserBase() {
 
 }
 
+function hitVnativeApi(ordedrId, price) {
+    if (price) {
+        price = (parseInt(price, 10) / 100) * 15;
+    }
+    // var url = 'https://mobpro.vnative.co/pixel?adid=5cb03404b6920d3de83be07b&txn_id=' + ordedrId + '&sale_amount=' + price;
+    var href = new URL(window.location.href);
+
+    var CLICK_ID = href.searchParams.get('cid');
+    if (!CLICK_ID) {
+        return;
+    }
+    var url = 'https://track.vnative.com/acquisition?click_id=' + CLICK_ID + '&security_token=1b7781812bd841125ccf&sale_amount=' + price + '&currency=INR';
+    //var url = 'https://mobpro.vnative.co/pixel?adid=5cb03404b6920d3de83be07b&txn_id=' + ordedrId + '&sale_amount=' + price;
+    $.get(url);
+}
 
 /**
  * Disable or enable phone input field and send OTP button
