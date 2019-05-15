@@ -51,33 +51,33 @@ var uniqueID = "";
 
         };
 
-        //   if (Captha()) {
-        $('#fieldForm').prop('disabled', true);
-        $("#loader").show();
-        $.post({
-            'url': "https://mojogamezone.com/development/riccha_dev/SlimMantra/setFormData.php",
-            'data': JSON.stringify(dataToSend),
-            'processData': false,
-            'success': function (res, status) {
-                var parse_data = JSON.parse(res);
-                if (parse_data.userData) {
-                    orderSuccess(parse_data.userData);
+        if (Captha()) {
+            $('#fieldForm').prop('disabled', true);
+            $("#loader").show();
+            $.post({
+                'url': "https://mojogamezone.com/development/riccha_dev/SlimMantra/setFormData.php",
+                'data': JSON.stringify(dataToSend),
+                'processData': false,
+                'success': function (res, status) {
+                    var parse_data = JSON.parse(res);
+                    if (parse_data.userData) {
+                        orderSuccess(parse_data.userData);
+                    }
+                    $('#order-msg').show();
+                },
+                'complete': function () {
+                    $('#fieldForm').prop('disabled', false);
+                    regForm.reset();
+                    regForm.clearValidation();
+                    grecaptcha.reset();
                 }
-                $('#order-msg').show();
-            },
-            'complete': function () {
-                $('#fieldForm').prop('disabled', false);
-                regForm.reset();
-                regForm.clearValidation();
-                grecaptcha.reset();
-            }
-        });
-        // } else {
-        //     $("#ModalTitle").html('Error Message');
-        //     $('#ord-msg').html('Please fill all the details.');
-        //     $('#ord-msg , #ModalTitle').addClass('color-red');
-        //     $('#order').modal('show');
-        // }
+            });
+        } else {
+            $("#ModalTitle").html('Error Message');
+            $('#ord-msg').html('Please fill all the details.');
+            $('#ord-msg , #ModalTitle').addClass('color-red');
+            $('#order').modal('show');
+        }
     });
     $('#order-msg').hide();
 })();
@@ -125,8 +125,8 @@ function setUserBase() {
         return;
     }
 
-    togglePhoneField(true);
-    toggleSendOtpProgressBar(true);
+    // togglePhoneField(true);
+    // toggleSendOtpProgressBar(true);
     var dataToSend = {
         "firstName": $('#fname').val(),
         "lastName": $('#lname').val(),
@@ -141,7 +141,7 @@ function setUserBase() {
             var parse_data = JSON.parse(res);
             if (parse_data.status === true) {
                 uniqueID = parse_data.userData.userId;
-                sendOTP(parse_data.userData.userId, $('#phone').val());
+                // sendOTP(parse_data.userData.userId, $('#phone').val());
             } else {
                 alert(parse_data.message);
                 togglePhoneField(false);
