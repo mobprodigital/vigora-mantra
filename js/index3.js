@@ -14,34 +14,24 @@ var uniqueID = "";
 
     var fulldate = day + ", " + month + ' ' + date + ", " + fullyear;
     document.getElementById("date").innerHTML = fulldate;
-
-
     var regForm = document.getElementById('regForm');
-
     regForm = validationSetup(regForm);
-
     regForm.addEventListener('onValidationFaild', function () {
         Captha()
         $("#ModalTitle").html('Error Message');
-
         $('#ord-msg').html('Please fill all the details.');
         $('#ord-msg , #ModalTitle').addClass('color-red');
-
         $('#order').modal('show');
-
     });
 
     regForm.addEventListener('onValidationSuccess', function () {
 
-
         var paymentType = $("input[name='payment_type']:checked").val();
-
         var price = $("input[name='price']:checked").val();
-
         var product
-        if (price == 1999) {
+        if (price == 1199) {
             product = '1 box'
-        } else if (price == 2999) {
+        } else if (price == 2599) {
             product = '3 box'
         } else {
             product = '6 box'
@@ -58,7 +48,6 @@ var uniqueID = "";
             "product": product,
             "price": price,
             "paymentType": paymentType
-
         };
 
         if (Captha()) {
@@ -71,32 +60,27 @@ var uniqueID = "";
                 'success': function (res, status) {
                     var parse_data = JSON.parse(res);
                     if (parse_data.data) {
-                        pymentSuccess(parse_data.data);
+                        orderSuccess(parse_data.data);
                     }
-                    $('#order-msg').show();
-
                 },
                 'complete': function () {
                     $('#fieldForm').prop('disabled', false);
                     regForm.reset();
                     regForm.clearValidation();
                     grecaptcha.reset();
-
                 }
             });
         } else {
             $("#ModalTitle").html('Error Message');
-
             $('#ord-msg').html('Please fill all the details.');
             $('#ord-msg , #ModalTitle').addClass('color-red');
-
             $('#order').modal('show');
         }
     });
-    $('#order-msg').hide();
+
 })();
 
-function pymentSuccess(id) {
+function orderSuccess(id) {
     var dataToSend = {
         'id': id
     };
@@ -107,53 +91,49 @@ function pymentSuccess(id) {
         'processData': false,
         'success': function (res, status) {
             var response = JSON.parse(res);
-            $('#order-msg').hide();
-
-
             if (response.data.payment_type == 'COD') {
-         
+                hitVnativeApi(response.data.order_id, response.data.price);
                 $("#ModalTitle").html('Order details');
                 $('#ord-msg').html('Thank You for Placing your order, your order ID is' + '  "' + response.data.order_id + '" , we have also sent a mail to your mail ID.' + ' ');
                 $('#ord-msg , #ModalTitle').addClass('color-dark-green').removeClass('color-red');
                 $('#order').modal('show');
-                $('#order-msg').hide();
+
             } else if (response.data.payment_type == 'online') {
                 $("#ORDER_ID").val(response.data.order_id);
                 $("#CUST_ID").val(response.data.user_id);
                 $("#TXN_AMOUNT").val(response.data.price);
-                document.hmg.submit();
+                document.index.submit();
             }
-            gtag_report_conversion();
         },
         'complete': function () {
             $("#loader").hide();
             $('#after_otp,#otp,#checkOTP').prop('disabled', true);
-
         }
     });
 }
 
 
 
+function hitVnativeApi(ordedrId, price) {
+    if (price) {
+        price = (parseInt(price, 10) / 100) * 15;
+    }
+    // var url = 'https://mobpro.vnative.co/pixel?adid=5cb03404b6920d3de83be07b&txn_id=' + ordedrId + '&sale_amount=' + price;
+    var href = new URL(window.location.href);
 
-
-function gtag_report_conversion(url) {
-    var callback = function () {
-        if (typeof (url) != 'undefined') {
-            window.location = url;
-        }
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-749956943/zWfkCNfV85gBEM_ezeUC',
-        'event_callback': callback
-    });
-    return false;
+    var CLICK_ID = href.searchParams.get('cid');
+    if (!CLICK_ID) {
+        return;
+    }
+    var url = 'https://track.vnative.com/acquisition?click_id=' + CLICK_ID + '&security_token=1b7781812bd841125ccf&sale_amount=' + price + '&currency=INR&sub1=' + ordedrId;
+    //var url = 'https://mobpro.vnative.co/pixel?adid=5cb03404b6920d3de83be07b&txn_id=' + ordedrId + '&sale_amount=' + price;
+    $.get(url);
 }
 
 
-// $('#sendOTP').click(function () {
-    function setUserBase(){
 
+//$('#sendOTP').click(function () {
+function setUserBase() {
     var phoneInput = document.getElementById('phone');
     validateField(phoneInput);
 
@@ -177,7 +157,6 @@ function gtag_report_conversion(url) {
         "lastName": $('#lname').val(),
         "email": $('#email').val(),
         "phone": $('#phone').val(),
-
     };
     $.post({
         'url': "https://mojogamezone.com/development/riccha_dev/HairProduct/setUserBase.php",
@@ -187,7 +166,7 @@ function gtag_report_conversion(url) {
             var parse_data = JSON.parse(res);
             if (parse_data.status === true) {
                 uniqueID = parse_data.data.id;
-               // sendOTP(parse_data.data.id, $('#phone').val());
+                //   sendOTP(parse_data.data.id, $('#phone').val());
             } else {
                 alert(parse_data.message);
                 togglePhoneField(false);
@@ -200,9 +179,8 @@ function gtag_report_conversion(url) {
     })
     // }
     // }
-
 }
-// });
+//});
 
 
 /**
