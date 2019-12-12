@@ -322,6 +322,23 @@ ul.sec1-list li span {
     width: 25px;
 }
 
+.banner {
+    width: 60%;
+    border: solid 1px #e3e3e3;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-15 {
+    margin: 10px 0px;
+}
+
+.dsp-mob {
+    display: none;
+}
+
 
 /* for xl screen */
 @media screen and (min-width: 1200px) {}
@@ -425,6 +442,11 @@ ul.sec1-list li span {
 /* Extra small screen*/
 @media screen and (max-width: 575px) {
 
+    .banner {
+        width: 80%;
+        border: solid 1px #e3e3e3;
+    }
+
     .sec1 {
         background: none
     }
@@ -477,5 +499,9 @@ ul.sec1-list li span {
 
     .form-check {
         margin: 5px 0px;
+    }
+
+    .dsp-mob {
+        display: block;
     }
 }

@@ -335,6 +335,19 @@ tbody tr:nth-child(odd) th {
     width: 25px;
 }
 
+.banner {
+    width: 60%;
+    border: solid 1px #e3e3e3;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-15 {
+    margin: 10px 0px;
+}
+
 /* for xl screen */
 @media screen and (min-width: 1200px) {}
 
@@ -457,7 +470,10 @@ tbody tr:nth-child(odd) th {
 
 /* Extra small screen*/
 @media screen and (max-width: 575px) {
-
+    .banner {
+        width: 80%;
+        border: solid 1px #e3e3e3;
+    }
 
 
     .sec1 {
