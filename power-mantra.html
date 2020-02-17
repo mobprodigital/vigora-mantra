@@ -65,7 +65,7 @@
                         <div style="font-size:22px ;text-align: center" class="dsp-mob">
                             <a href="https://mobpro.vnative.co/5cd17a21b6920d33431a2679?p1={your-transaction-id}&source={your-sub-aff-id}"
                                 download>
-                                Click Here for Sample Product
+                                <!-- Click Here for Sample Product -->
                                 <div style="display: flex">
                                     <img style="width: 50%" src="assets/images/adult/reviews-1.jpg" alt="">
                                     <img style="width: 50%" src="assets/images/adult/reviews-2.jpg" alt="">
@@ -279,15 +279,15 @@
                                         <div class="container-floid">
 
                                             <div class="form-check form-check-inline">
-                                                <input checked class="form-check-input " type="radio"
+                                                <input  class="form-check-input " type="radio"
                                                     name="payment_type" id="payment_type1" value='COD'>
                                                 <label class="form-check-label cursor-pointer" for="payment_type1">Cash
                                                     on
                                                     Delivery</label>
                                             </div>
 
-                                            <div class="form-check form-check-inline d-none">
-                                                <input class="form-check-input " type="radio" name="payment_type"
+                                             <div class="form-check form-check-inline">
+                                                <input checked class="form-check-input " type="radio" name="payment_type"
                                                     id="payment_type2" value="online">
                                                 <label class="form-check-label cursor-pointer"
                                                     for="payment_type2">Online Payment</label>
@@ -324,14 +324,17 @@
                             </form>
 
 
-                            <form class="" name="pm" method="post" action="payment_getway/pgRedirect.php">
-                                <input id="ORDER_ID" type="hidden" tabindex="1" name="ORDER_ID" value="">
-                                <input id="CUST_ID" type="hidden" tabindex="2" name="CUST_ID" value="">
-                                <input id="INDUSTRY_TYPE_ID" tabindex="4" name="INDUSTRY_TYPE_ID" type="hidden"
-                                    value="Retail"></td>
-                                <input id="CHANNEL_ID" tabindex="4" type="hidden" name="CHANNEL_ID" value="WEB">
-                                <input id="TXN_AMOUNT" title="TXN_AMOUNT" tabindex="10" type="hidden" name="TXN_AMOUNT"
-                                    value="">
+                            <form class="" name="pm" method="post" action="power-payment.php">
+								<input id="order_id"  type="hidden" name="order_id" value="">
+								<input id="currency"  type="hidden" name="currency" value="">
+								<input id="name" 	 type="hidden" name="name"  value="">
+								<input id="eemail" 	 type="hidden" name="email" value="">
+								<input id="contact"  type="hidden" name="contact" value="">
+								<input id="amount"  type="hidden" name="amount" value="">
+								<input id="address"  type="hidden" name="address" value="">
+								<input id="ucity"  type="hidden" name="city" value="">
+								<input id="upincode"  type="hidden" name="pincode" value="">
+								<input id="ustate"  type="hidden" name="state" value="">
 
                             </form>
                         </div>
